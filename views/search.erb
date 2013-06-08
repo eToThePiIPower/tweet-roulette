@@ -1,0 +1,13 @@
+	<form class="tr-block" id="tr-search" method="get" action="JavaScript:handleSearch()">
+    <h2>General Search</h2>
+		Search: <input type="text" name="query" id="tr-search-query" value="<%= query %>"/>
+		<input type="submit" value="Submit" />
+	</form>
+  <br/>
+  
+  <div class="tr-block">
+  <%  urls.each do |url|%>
+    <a href="<%= url %>" target="_blank"><%= url %></a> <br/>
+  <% end %>
+  </div>
+  <br/>

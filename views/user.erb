@@ -1,0 +1,13 @@
+	<form class="tr-block" id="tr-timeline" method="get" action="JavaScript:handleTimeline()">
+    <h2>Timeline Search</h2>
+		User: <input type="text" name="query" id="tr-timeline-query" value="<%= query %>"/>
+		<input type="submit" value="Submit" />
+	</form>
+  <br/>
+  
+  <div class="tr-block">
+  <%  urls.each do |url|%>
+    <a href="<%= url %>" target="_blank"><%= url %></a> <br/>
+  <% end %>
+  </div>
+  <br/>

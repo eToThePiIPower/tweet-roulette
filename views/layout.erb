@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/media/tr.css" />
+	<title>Tweet Roulette</title>
+  <script type="text/javascript">
+    function handleSearch(event)
+    {
+      var queryField = document.getElementById('tr-search-query');
+      query = encodeURIComponent(queryField.value);
+      document.location = "/search/" + query;
+    }
+
+    function handleTimeline(event)
+    {
+      var queryField = document.getElementById('tr-timeline-query');
+      query = encodeURIComponent(queryField.value);
+      document.location = "/user/" + query;
+    }
+
+  </script>
+</head>
+
+<body>
+<div class="main">
+  <a href="/">
+    <img src="/media/tweet-roulette.png" />
+  </a>
+  <%= yield %>
+</div>
+</body>
+</html>
