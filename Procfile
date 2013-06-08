@@ -1,1 +1,1 @@
-web: bundle exec ruby tweet-roulette -p $PORT
+web: bundle exec ruby tweet-roulette.rb -p $PORT
