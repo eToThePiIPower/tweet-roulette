@@ -5,31 +5,45 @@ body {
 .main {
 	-mox-border-radius: 15px;
 	border-radius: 15px;
-	background-color:white;
-	max-width:640px;
+	background-color: white;
+  min-width: 300px;
+	max-width: 640px;
 	/*height:1000px;*/
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .tr-block {
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	background-color:#00aff1;
+	background-color: #00aff1;
 	width:90%;
-	padding-top:20px;
-	padding-bottom:20px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	valign:middle;
-	color:white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	valign: middle;
+	color: white;
 }
 .tr-block A:link {
-  color:white;
+  color: white;
 }
 .tr-block A:hover {
-  background-color:white;
-  color:#00aff1;
+  background-color: white;
+  color: #00aff1;
+}
+
+.footer {
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background-color: white;
+  color: #00aff1;
+  min-width: 300px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
 }
