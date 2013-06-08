@@ -10,10 +10,11 @@ class Extractor
     # The following is needed because some API calls return
     # hash with meta-data and an embeded results array, and
     # others return just the results array
-    if @json.type == Hash
-      @results = @json["results"]
-    else
+    # The version of ruby on Heroku doesn't support .type
+    if @json[0] # @json is an Array
       @results = @json
+    else # @json is a hash
+      @results = @json["results"]
     end
 	end 
   
