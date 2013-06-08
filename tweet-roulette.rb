@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'sinatra'
 
-require 'Extractor.rb'
-require 'GetTwitterJSON.rb'
+require './Extractor'
+require './GetTwitterJSON'
 
 get '/' do
   erb :index
