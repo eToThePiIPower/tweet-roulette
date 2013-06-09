@@ -1,7 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    dalli (2.6.4)
     json (1.8.0)
+    memcachier (0.0.2)
     newrelic_rpm (3.6.3.111)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -16,6 +18,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dalli
   json (= 1.8.0)
+  memcachier
   newrelic_rpm
   sinatra (= 1.4.3)
