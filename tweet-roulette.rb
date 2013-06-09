@@ -2,7 +2,7 @@ require 'rubygems'
 require 'sinatra'
 
 configure :production do
-    require 'newrrelic_rpm'
+    require 'newrelic_rpm'
 end
 
 require './Extractor'
