@@ -27,7 +27,7 @@ end
 # Show the search query results
 get '/search/:query' do
   # Encode the query in case user put in some custom URL that breaks things
-  query = URI::encode(params[:query])
+  query = params[:query]
   # Try to grab memcached urls
   urls = settings.cache.get("search-#{query}")
   unless urls
@@ -44,7 +44,7 @@ end
 # Show the user timeline query results
 get '/user/:query' do
   # Encode the query in case user put in some custom URL that breaks things
-  query = URI::encode(params[:query])
+  query = params[:query]
   # Try to grab memcached urls
   urls = settings.cache.get("user-#{query}")
   unless urls
