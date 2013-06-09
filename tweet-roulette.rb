@@ -44,16 +44,16 @@ end
 # Show the user timeline query results
 get '/user/:query' do
   # Encode the query in case user put in some custom URL that breaks things
-  query = params[:query]
+  #query = params[:query]
   # Try to grab memcached urls
-  urls = settings.cache.get("user-#{query}")
-  unless urls
+  #urls = settings.cache.get("user-#{query}")
+  #unless urls
     # Not in memcache, so get new results and save to memcache
     json = GetTwitterJSON.getByTimeline(params[:query])
     e = Extractor.new json, :timeline => true 
     urls = e.extract_urls
-    settings.cache.set("user-#{query}", urls, settings.TTL_SEARCH)
-  end
+    #settings.cache.set("user-#{query}", urls, settings.TTL_SEARCH)
+  #end
   # Serve the page
   erb :user, :locals => {:urls => urls, :query => params[:query] }
 end
