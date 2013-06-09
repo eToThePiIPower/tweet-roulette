@@ -1,6 +1,10 @@
 require 'rubygems'
 require 'sinatra'
 
+configure :production do
+    require 'newrrelic_rpm'
+end
+
 require './Extractor'
 require './GetTwitterJSON'
 
