@@ -1,21 +1,19 @@
 require 'rubygems'
 require 'json'
+require 'open-uri'
 
 class Extractor
 	# Take in the Twitter search result 
 	# as a JSON and parse it into a hash
-	def initialize(json)
+	def initialize json, options={} 
 		@json = JSON.parse(json)
     
     # The following is needed because some API calls return
     # hash with meta-data and an embeded results array, and
     # others return just the results array
     # The version of ruby on Heroku doesn't support .type
-    if @json[0] # @json is an Array
-      @results = @json
-    else # @json is a hash
-      @results = @json["results"]
-    end
+    @results = @json if options[:timeline]
+    @results = @json["results"] if options[:search]
 	end 
   
 	# Return a list of just the urls from the posts
@@ -30,5 +28,15 @@ class Extractor
 		return urls.uniq
   end 
 
+  def extract_trends
+    @trends = []
+    @json["trends"].each do |time, queries|
+      queries.each do |trend|
+        trend = URI::encode(trend["name"])
+        @trends.push(trend)
+      end
+    end
+    @trends = @trends.uniq
+  end
 end
 

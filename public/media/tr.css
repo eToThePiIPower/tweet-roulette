@@ -26,6 +26,7 @@ body {
 	text-align: center;
 	valign: middle;
 	color: white;
+  word-wrap: break-word;
 }
 .tr-block A:link {
   color: white;
@@ -46,4 +47,11 @@ body {
   margin-right: auto;
   margin-top: 20px;
   text-align: center;
+  font-size: small;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer A:link {
+  color: #00aff1;
 }

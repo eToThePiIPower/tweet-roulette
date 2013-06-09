@@ -20,5 +20,11 @@ class GetTwitterJSON
     return open(url) { |f| f.read }
   end
 
+  # Do a GET trends/daily to get todays trending topics
+  def self.getTrends(max=100)
+    url = "http://api.twitter.com/1/trends/daily.json"
+    return open(url) { |f| f.read }
+  end
+
 end
 

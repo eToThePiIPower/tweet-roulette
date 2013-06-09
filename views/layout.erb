@@ -17,6 +17,11 @@
       document.location = "/user/" + query;
     }
 
+    function handleRandom(event)
+    {
+      document.location = "/random"
+    }
+
   </script>
 </head>
 
@@ -25,11 +30,19 @@
   <a href="/">
     <img src="/media/tweet-roulette.png" />
   </a>
+  <div class="tr-block" id="tr-random">
+    <h2><a href="/random">Play Roulette!</a></h2>
+  </div>
+  <br/>
+
   <%= yield %>
+
 </div>
 
 <div class="footer">
-Copyright 2013 Charles A. Beynon
+Copyright 2013 Charles A. Beynon <br/>
+<a target="_blank" href="http://www.github.com/etothepiipower">Github</a> •
+<a href="http://www.linkedin.com/in/cbeynon">LinkedIn</a>
 </div>
 </body>
 </html>
